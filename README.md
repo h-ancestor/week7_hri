@@ -11,14 +11,12 @@ Package ROS 2 Humble cho TurtleBot 4 Simulation: phân vùng occupancy map, gắ
 - `maps/`: map PGM/YAML, ảnh phân vùng, JSON và nguồn bản đồ.
 - `scripts/download_vosk_model.py`: tải và giải nén model Vosk vào `models/` khi cần dùng microphone. Model nhị phân không được commit vì sau giải nén khoảng 53 MB.
 - `tests/`: 14 kiểm thử parser, segmentation, tọa độ và trường hợp vùng không tồn tại.
-- `bao_cao_bai_thuc_hanh_07.docx`, `.pdf`: báo cáo chi tiết 13 trang, có ảnh/bảng.
 - `reports/figures/`, `reports/generate_report.py`: hình nguồn và script tạo lại DOCX.
 - `HUONG_DAN_CHAY.md`, `KET_QUA_KIEM_THU.md`: hướng dẫn và kết quả.
 
 ## Yêu cầu ngoài repository
 
-Ubuntu 22.04, ROS 2 Humble, TurtleBot 4 Simulation, Nav2, colcon, OpenCV, PyYAML, `alsa-utils` và thiết bị microphone nếu dùng Vosk trực tiếp. Simulator và launch localization được cung cấp bởi workspace khóa học có package `turtlebot4_lab` và `turtlebot4_week5`; các package đó không được sao chép vào đây.
-
+Ubuntu 22.04, ROS 2 Humble, TurtleBot 4 Simulation, Nav2, colcon, OpenCV, PyYAML, `alsa-utils` và thiết bị microphone nếu dùng Vosk trực tiếp. 
 `requirements.txt` cài Vosk và Pillow (Pillow chỉ cần nếu muốn tạo lại báo cáo). Các thư viện ROS/OpenCV/PyYAML nên cài bằng apt/rosdep trong ROS environment. Model tiếng Việt nhỏ được Vosk công bố khoảng 32 MB và Apache-2.0; xem [danh sách model Vosk chính thức](https://alphacephei.com/vosk/models).
 
 ## Build và kiểm thử
@@ -85,8 +83,3 @@ ros2 run turtlebot4_week7 voice_dashboard
 
 Mở RViz bằng cấu hình TurtleBot 4, đặt initial pose bằng **2D Pose Estimate**, rồi đợi AMCL/Nav2 active. Dashboard hướng dẫn A, B, A→B, C→B theo thứ tự. Các waypoint là điểm demo; đối chiếu map trước khi chạy. Lệnh vùng không tồn tại bị parser từ chối. Để ghi video, quay cửa sổ RViz và dashboard, sau đó dừng recorder bằng Ctrl+C để MP4 được đóng hoàn chỉnh.
 
-## Kết quả đã xác nhận
-
-14/14 unit test đạt; colcon build thành công. Log mô phỏng xác nhận Nav2 hoàn tất các tuyến A, B, A→B và C→B. Bước Z được bỏ qua trong video theo yêu cầu demo; parser unknown-region vẫn có unit test. Chất lượng ASR chưa được đo WER trên tập audio tham chiếu.
-
-Video để tải riêng lên Google Drive (không nằm trong repository): `tuan7_demo_phan_vung_va_dieu_huong.mp4`. Metadata đã kiểm tra: H.264/AAC, 1600×600, khoảng 27 phút 04 giây.
