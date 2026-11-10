@@ -1,0 +1,100 @@
+{
+  "map": "map.yaml",
+  "components": [
+    {
+      "label": 1,
+      "area": 6991,
+      "pixel": [
+        337.70218852810757,
+        46.197253611786586
+      ]
+    },
+    {
+      "label": 13,
+      "area": 111780,
+      "pixel": [
+        331.7715602075505,
+        196.99867597065665
+      ]
+    },
+    {
+      "label": 123,
+      "area": 305,
+      "pixel": [
+        401.2393442622951,
+        346.1803278688525
+      ]
+    },
+    {
+      "label": 131,
+      "area": 133,
+      "pixel": [
+        220.89473684210526,
+        383.81954887218046
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "A",
+      "name": "Khu vực A",
+      "aliases": [
+        "khu vực a",
+        "area a",
+        "điểm a"
+      ],
+      "pixel": [
+        140,
+        120
+      ],
+      "goal": {
+        "x": -6.074999999999999,
+        "y": 5.674999999999999,
+        "yaw": 0.0
+      },
+      "component": 13,
+      "partition_area_pixels": 24729
+    },
+    {
+      "id": "B",
+      "name": "Khu vực B",
+      "aliases": [
+        "khu vực b",
+        "area b",
+        "điểm b",
+        "phòng thí nghiệm"
+      ],
+      "pixel": [
+        320,
+        200
+      ],
+      "goal": {
+        "x": 2.9250000000000025,
+        "y": 1.6750000000000007,
+        "yaw": 0.0
+      },
+      "component": 13,
+      "partition_area_pixels": 73429
+    },
+    {
+      "id": "C",
+      "name": "Hành lang C",
+      "aliases": [
+        "khu vực c",
+        "hành lang",
+        "corridor c"
+      ],
+      "pixel": [
+        260,
+        360
+      ],
+      "goal": {
+        "x": -0.07499999999999929,
+        "y": -6.325,
+        "yaw": 0.0
+      },
+      "component": 13,
+      "partition_area_pixels": 13622
+    }
+  ]
+}

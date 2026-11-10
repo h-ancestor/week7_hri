@@ -1,0 +1,19 @@
+# Pixel centers are initial candidates on the included SLAM map. Inspect in RViz before navigation.
+regions:
+  - id: A
+    name: Khu vực A
+    # Vosk nghe chữ A trong cụm “khu vực A đến” thành “đa”, đôi khi thành “iv”.
+    aliases: [khu vực a, khu vực đa, khu vực iv, area a, điểm a]
+    pixel: [140, 120]
+    goal: {x: -6.075, y: 5.675, yaw: 0.0}
+  - id: B
+    name: Khu vực B
+    # Các dạng Vosk quan sát được: bê, bị, biệt, biên, đề, mê, nề và đi.
+    aliases: [khu vực b, khu vực bê, bê, khu vực bị, khu vực biệt, khu vực biên, biên, khu vực đề, khu vực mê, mê, khu vực nề, nề, khu vực đi, area b, điểm b, điểm bê, phòng thí nghiệm]
+    pixel: [320, 200]
+    goal: {x: 2.925, y: 1.675, yaw: 0.0}
+  - id: C
+    name: Hành lang C
+    aliases: [khu vực c, khu vực xê, xê, hành lang, hành lang xê, corridor c]
+    pixel: [260, 360]
+    goal: {x: -0.075, y: -6.325, yaw: 0.0}
